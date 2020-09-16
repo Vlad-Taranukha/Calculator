@@ -21,7 +21,7 @@ input{
     padding: 10px;
 }
 
-.finalResult{
+#finalResult{
     display: none;
 }
 

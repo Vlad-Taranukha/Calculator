@@ -9,24 +9,24 @@
 <h1>калькулятор</h1>
 <div class="firstNumber numberBlock">
     <p>Первое число</p>
-    <button>+/-</button>
+    <button class="changeSign">+/-</button>
     <input type="text" id="firstNumber">
 </div>
 <div class="operators">
     <p>Операция</p>
-    <button>+</button>
-    <button>*</button>
-    <button>-</button>
-    <button>/</button>
+    <button class="operationBtn" value="+">+</button>
+    <button class="operationBtn" value="*">*</button>
+    <button class="operationBtn" value="-">-</button>
+    <button class="operationBtn" value="/">/</button>
 </div>
 <div class="secondNumber numberBlock">
     <p>Второе число</p>
-    <button>+/-</button>
+    <button class="changeSign">+/-</button>
     <input type="text" id="secondNumber">
 </div>
 <div class="result">
-    <button>=</button>
-    <p class="finalResult">
+    <button id="resBtn">=</button>
+    <p id="finalResult">
         <span id="resultNumber1"></span>
         <span id="operation"></span>
         <span id="resultNumber2"></span>
