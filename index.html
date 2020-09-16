@@ -6,8 +6,32 @@
     <title>Калькулятор</title>
 </head>
 <body>
-
-
+<h1>калькулятор</h1>
+<div class="firstNumber numberBlock">
+    <p>Первое число</p>
+    <button>+/-</button>
+    <input type="text" id="firstNumber">
+</div>
+<div class="operators">
+    <button>+</button>
+    <button>*</button>
+    <button>-</button>
+    <button>/</button>
+</div>
+<div class="secondNumber">
+    <p>Второе число</p>
+    <button>+/-</button>
+    <input type="text" id="secondNumber numberBlock">
+</div>
+<div class="result">
+    <h2>Результат:</h2>
+    <p class="finalResult">
+        <span id="resultNumber1"></span>
+        <span id="operation"></span>
+        <span id="resultNumber2"></span>
+        =
+        <span id="result"></span></p>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>
