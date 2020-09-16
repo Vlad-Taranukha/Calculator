@@ -1,2 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.numberBlock,
+.operators,
+.result{
+    text-align: center;
+    border: 2px solid green;
+    padding: 10px 0;
+}
+
+button,
+input{
+    padding: 10px;
+}
+
+.finalResult{
+    display: none;
+}
 
