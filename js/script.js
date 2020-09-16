@@ -11,7 +11,7 @@ firstNumber.addEventListener('keypress', function (event) {
 
 /*Запрещаем вводить всё, кроме цифр и точки для второго числа*/
 secondNumber.addEventListener('keypress', function (event) {
-    if(event.keyCode < 48 || event.keyCode > 57 && event.key != '.'){
+    if((event.keyCode < 48 || event.keyCode > 57) && event.key != '.'){
         event.preventDefault();
     }
 });
@@ -39,7 +39,14 @@ for (let i = 0; i < signBtns.length; i++){
 /*Формируем результат по нажатию кнопки "="*/
 document.getElementById('resBtn').addEventListener('click', function () {
     if (firstNumber.value != "" && secondNumber.value != ""){
-        let res = eval(Number(firstNumber.value) +""+operator+""+Number(secondNumber.value));
+        let res = 0;
+        if ((secondNumber.value < 0) && (operator == '-') ){
+            res = Number(firstNumber.value) + (-secondNumber.value);
+        }else if((secondNumber.value == 0) && (operator == '/')){
+            res = "На ноль делить нельзя!!!";
+        }else{
+            res = eval(Number(firstNumber.value) +""+operator+""+Number(secondNumber.value));
+        }
         document.getElementById('resultNumber1').innerText = "(" +  firstNumber.value + ")";
         document.getElementById('resultNumber2').innerText = "(" + secondNumber.value + ")";
         document.getElementById('operation').innerText = operator;
